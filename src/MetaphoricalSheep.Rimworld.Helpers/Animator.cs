@@ -5,10 +5,32 @@ namespace MetaphoricalSheep.Rimworld.Helpers
 {
     public class Animator
     {
+        private bool _disableAnimation;
+
+        private bool _forceUpdate;
+
         /// <summary>
         /// Do not animate, return false immediately
         /// </summary>
-        public bool DisableAnimation = false;
+        public bool DisableAnimation
+        {
+            get => _disableAnimation;
+            set
+            {
+                // arcing animation gets stuck on an arc frame
+                // if it is busy arcing, but animation is set to false.
+                // this forces texture to return to static frame when animation
+                // gets disable
+                if (!value)
+                {
+                    CurrentFrame = FirstFrame;
+                    _previousFrame = FirstFrame;
+                    _forceUpdate = true;
+                }
+
+                _disableAnimation = value;  
+            }
+        }
 
         /// <summary>
         /// First frame of the array of textures
@@ -134,7 +156,13 @@ namespace MetaphoricalSheep.Rimworld.Helpers
             // If animations are disabled do nothing
             if (DisableAnimation)
             {
-                return false;
+                if (!_forceUpdate)
+                {
+                    return false;
+                }
+
+                _forceUpdate = false;
+                return true;
             }
 
             // increase the number of ticks since the last time
