@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MetaphoricalSheep.Rimworld.Helpers", "MetaphoricalSheep.Rimworld.Helpers\MetaphoricalSheep.Rimworld.Helpers.csproj", "{EF814564-5F3A-4986-B80B-F09E8A7BCC2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF814564-5F3A-4986-B80B-F09E8A7BCC2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF814564-5F3A-4986-B80B-F09E8A7BCC2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF814564-5F3A-4986-B80B-F09E8A7BCC2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF814564-5F3A-4986-B80B-F09E8A7BCC2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		BuildVersion_UseGlobalSettings = True
+		BuildVersion_StartDate = 2000/1/1
+		SolutionGuid = {F7D61550-2960-443B-8850-6137AC94DA34}
+	EndGlobalSection
+EndGlobal
